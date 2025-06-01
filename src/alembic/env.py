@@ -6,16 +6,16 @@ from sqlalchemy.ext.asyncio import AsyncEngine, create_async_engine
 
 from alembic import context
 
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 from src.core.config import settings
 from src.core.database.base_orm_model import Base
 
-# Імпортуй усі моделі, які мають створюватись через Alembic
-from src.modules.users.infrastructure.models.user_model import UserModel
+import sys
+import os
 
-# Налаштування логування
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+
+
 config = context.config
 fileConfig(config.config_file_name)
 target_metadata = Base.metadata
@@ -26,7 +26,6 @@ def get_url():
 
 
 def run_migrations_offline():
-    """Run migrations in 'offline' mode."""
     url = get_url()
     context.configure(
         url=url,

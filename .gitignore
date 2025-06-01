@@ -15,4 +15,6 @@ venv/
 # IDE settings
 *.iml
 *.env
+.env
+
 

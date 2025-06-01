@@ -20,7 +20,7 @@ class BroadcastService:
             text: str,
             *,
             photo_url: Optional[str] = None,
-            parse_mode: str = "HTML",  # або "Markdown"
+            parse_mode: str = "HTML",
             reply_markup: Optional[InlineKeyboardMarkup | ReplyKeyboardMarkup] = None,
     ) -> None:
         for user_id in user_ids:
