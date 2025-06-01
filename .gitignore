@@ -1,20 +1,41 @@
-# Python
+# Byte-compiled / cache
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
 
-# Env
+# Virtual environment
 .venv/
 venv/
+ENV/
+env/
 
-# IDE
-.idea/
-
-# Pytest
-.pytest_cache/
-
-# IDE settings
-*.iml
-*.env
+# Environment variables
 .env
+*.env
 
+# VSCode / JetBrains IDEs
+.idea/
+.vscode/
+*.iml
 
+# Test caches
+.pytest_cache/
+.tox/
+.coverage
+htmlcov/
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+
+# Migrations / Alembic
+migrations/
+alembic/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
